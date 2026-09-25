@@ -213,36 +213,18 @@
       <p>Soru, öneri ya da hata bildirimi için bize yaz. Genellikle 1 iş günü içinde dönüş yapılır.</p>
     </div>
     <div class="contact-actions">
-      <button class="btn blue" type="button" data-open="dlg-iletisim">Bize yaz</button>
+      <a class="btn blue" href="/iletisim" target="_blank" rel="noopener">Bize yaz</a>
       <p>ya da doğrudan e-posta: <a href="mailto:mustafaemir.ata@outlook.com">mustafaemir.ata@outlook.com</a></p>
     </div>
   </div>
 </div></section>
 </main>
-<dialog class="dlg sheet" id="dlg-iletisim" aria-labelledby="dlg-iletisim-t">
-  <button class="dlg-x" type="button" data-close aria-label="Kapat">×</button>
-  <h2 id="dlg-iletisim-t">İletişim</h2>
-  <form class="contact-form" action="https://formspree.io/f/xqpadgag" method="POST" target="_blank" data-text='{&quot;sending&quot;: &quot;Gönderiliyor&quot;, &quot;ok&quot;: &quot;Teşekkürler! Mesajın bize ulaştı.&quot;, &quot;err&quot;: &quot;Gönderilemedi. İnternet bağlantını kontrol et ya da doğrudan e-posta at.&quot;, &quot;send&quot;: &quot;Gönder&quot;}'>
-    <label>Konu başlığı<input name="konu" type="text" required maxlength="120"></label>
-    <label>E-posta adresin<input name="email" type="email" required autocomplete="email"></label>
-    <label>Mesajın<textarea name="message" rows="5" required maxlength="4000"></textarea></label>
-    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-    <p class="consent">Gönder&#x27;e bastığında bilgilerinin yanıt verebilmek amacıyla işlenmesini kabul edersin. <a class="linklike" href="/kvkk">KVKK Aydınlatma Metni</a></p>
-    <p class="form-status" role="status"></p>
-    <div class="form-actions">
-      <button class="btn cream" type="button" data-close>Kapat</button>
-      <button class="btn green" type="submit">Gönder</button>
-    </div>
-    <p class="direct">ya da doğrudan e-posta: <a href="mailto:mustafaemir.ata@outlook.com">mustafaemir.ata@outlook.com</a></p>
-  </form>
-</dialog>
-
 <footer class="footer"><div class="wrap">
   <a class="brand" href="/"><img src="/assets/img/ikon-tr.webp" alt="" width="40" height="40">Tam <b>Zamanı</b></a>
   <nav>
     <a href="/gizlilik">Gizlilik Politikası</a>
     <a href="/kvkk">KVKK Aydınlatma Metni</a>
-    <button type="button" class="linklike" data-open="dlg-iletisim">İletişim</button>
+    <a href="/iletisim" target="_blank" rel="noopener">İletişim</a>
     <a href="/destek">Destek</a>
     <a href="/en">English</a>
     <a href="mailto:mustafaemir.ata@outlook.com">mustafaemir.ata@outlook.com</a>

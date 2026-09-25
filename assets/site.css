@@ -683,3 +683,7 @@ table.score tr:first-child td:first-child { color: var(--pink); }
   .rank-tab b { font-size: 20px; }
 }
 .footer .linklike { text-align: left; }
+
+.page-form { max-width: 620px; margin-top: 10px; }
+.page-form .btn { width: 100%; margin-top: 4px; }
+.page-form textarea { min-height: 200px; }
