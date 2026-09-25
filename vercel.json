@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/tamzamani-gizlilik-politikasi", "destination": "/gizlilik", "permanent": true },
+    { "source": "/privacy", "destination": "/en/privacy", "permanent": true },
+    { "source": "/support", "destination": "/en/support", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    }
+  ]
+}

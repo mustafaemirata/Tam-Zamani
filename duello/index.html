@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Düelloya çağrıldın! | Tam Zamanı</title>
+<meta name="description" content="Arkadaşın seni Tam Zamanı düellosuna çağırıyor. Gizli hedefe kim daha yakın duracak?">
+<meta name="theme-color" content="#FFD21F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Düelloya çağrıldın! | Tam Zamanı">
+<meta property="og:description" content="Arkadaşın seni Tam Zamanı düellosuna çağırıyor. Gizli hedefe kim daha yakın duracak?">
+<meta property="og:image" content="/assets/img/og-tr.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" hreflang="tr" href="/duello">
+<link rel="alternate" hreflang="en" href="/duello">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/ikon-tr.webp" alt="" width="40" height="40">Tam <b>Zamanı</b></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü"><span></span><span></span><span></span></button>
+  <nav class="nav" id="site-nav"><a href="/">Ana sayfa</a><a class="lang" href="/duello" hreflang="en">English</a></nav>
+</div></header>
+<main class="doc"><div class="wrap"><article class="panel">
+<div style="text-align:center">
+<h1 class="banner" style="font-size:clamp(30px,7vw,44px);margin-bottom:26px">Düelloya<span>çağrıldın!</span></h1>
+<p style="max-width:460px;margin:0 auto">Arkadaşın gizli bir hedefe karşı oynadı. Şimdi sıra sende: aynı hedefe onun durduğundan daha yakın dur.</p>
+<p style="margin:26px 0 0;font-family:var(--display);font-size:12px;opacity:.6">Düello kodu</p>
+<p id="code" style="margin:4px 0 0;font-family:var(--display);font-size:clamp(38px,9vw,56px);letter-spacing:.18em">??????</p>
+<div class="contact" style="justify-content:center"><a class="btn" id="open" href="/">Uygulamada aç</a><button class="btn blue" id="copy" type="button">Kodu kopyala</button></div>
+<p style="margin-top:22px;font-size:15px;color:var(--ink-soft)">Uygulama yüklüyse düello kendiliğinden açılır. Açılmazsa Tam Zamanı'nda Düello sekmesinden Kod gir düğmesine bas ve kodu yaz.<br><span lang="en">Your friend challenged you in Perfect Timing. Open the app, go to the Duel tab, tap Kod gir and enter the code.</span></p>
+</div>
+<script>
+  const code = (new URLSearchParams(location.search).get("kod") || "").toUpperCase().replace(/[^ABCDEFGHJKMNPQRSTUVWXYZ23456789]/g, "").slice(0, 6);
+  const appURL = "tamzamani://duello/" + code;
+  if (code.length === 6) {
+    document.getElementById("code").textContent = code;
+    document.getElementById("open").href = appURL;
+    setTimeout(() => { location.href = appURL; }, 400);
+  }
+  document.getElementById("copy").addEventListener("click", async (e) => {
+    try { await navigator.clipboard.writeText(code); e.currentTarget.textContent = "Kopyalandı"; } catch (_) {}
+  });
+</script>
+</article></div></main>
+<footer class="footer"><div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/ikon-tr.webp" alt="" width="40" height="40">Tam <b>Zamanı</b></a>
+  <nav><a href="/gizlilik">Gizlilik Politikası</a><a href="/kvkk">KVKK Aydınlatma Metni</a><a href="/#iletisim">İletişim</a><a href="/destek">Destek</a><a href="/en">English</a><a href="mailto:mustafaemir.ata@outlook.com">mustafaemir.ata@outlook.com</a></nav>
+  <small>© 2026 Mustafa Emir Ata. Tüm hakları saklıdır.</small>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
